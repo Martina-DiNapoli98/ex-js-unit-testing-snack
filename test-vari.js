@@ -28,10 +28,22 @@ const str = "Otto"
       const reversedStr = cleanStr.split('').reverse().join('');
        return cleanStr === reversedStr
  }
+
+
+ const title = ""
+ function createSlugThree(title){
+    if(title === ""){
+        throw new Error("il titolo non può essere vuoto")
+    }
+ }
+
+
+
 module.exports = {
     getInitials,
     createSlug,
     average,
     createSlugTwo,
-    isPalindrome
+    isPalindrome,
+    createSlugThree
 }

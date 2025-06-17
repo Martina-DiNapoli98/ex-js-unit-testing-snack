@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average, createSlugTwo, isPalindrome} = require('./test-vari.js')
+const { getInitials, createSlug, average, createSlugTwo, isPalindrome, createSlugThree} = require('./test-vari.js')
 /* snack 1 */
 test("La funzione getInitials restituisce le iniziali di un nome completo.", ()=>{
     const name = "Mario Rossi"
@@ -34,4 +34,11 @@ const media = [1,2,3,4,5];
     expect(isPalindrome(str)).toBe(true)
  })
 
+ /* snack 6 */
+ const title = ""
+ 
+ test("La funzione createSlugThree lancia un errore se il titolo è vuoto o non valido.", ()=>{
+   
+    expect(() => createSlugThree(title)).toThrow("il titolo non può essere vuoto")
+ });
 
