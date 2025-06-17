@@ -6,6 +6,7 @@ function getInitials(stringa){
     .join('')               
     .toUpperCase();   
 }
+
 function createSlug(stringa){
     return stringa.toLowerCase()
 
@@ -37,6 +38,21 @@ const str = "Otto"
     }
  }
 
+ function findPostById(posts, id){
+    if(isNaN(id)){
+        throw new Error(`${id} non è un id`)
+    }
+    posts.forEach(p=>{
+        if(p.id === undefined || p.title === undefined ||p.slug === undefined ){
+            throw new Error("Array non è un nel formato corretto")
+        }
+    })
+    return posts.find(p=>{
+        return p.id === id || null;
+
+    })
+}
+
 
 
 module.exports = {
@@ -45,5 +61,6 @@ module.exports = {
     average,
     createSlugTwo,
     isPalindrome,
-    createSlugThree
+    createSlugThree,
+    findPostById
 }
