@@ -8,6 +8,11 @@ function getInitials(stringa){
 }
 function createSlug(stringa){
     return stringa.toLowerCase()
+
+}
+function createSlugTwo(stringa){
+    return stringa.toLowerCase().replace(/\s+/g, '-')
+
 }
 
 const media = [1,2,3,4,5];
@@ -20,5 +25,6 @@ function average(media){
 module.exports = {
     getInitials,
     createSlug,
-    average
+    average,
+    createSlugTwo
 }
