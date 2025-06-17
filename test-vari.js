@@ -22,9 +22,16 @@ function average(media){
     return sum / media.length
 }
 
+const str = "Otto"
+ function isPalindrome(str){
+      const cleanStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+      const reversedStr = cleanStr.split('').reverse().join('');
+       return cleanStr === reversedStr
+ }
 module.exports = {
     getInitials,
     createSlug,
     average,
-    createSlugTwo
+    createSlugTwo,
+    isPalindrome
 }
