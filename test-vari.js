@@ -6,7 +6,11 @@ function getInitials(stringa){
     .join('')               
     .toUpperCase();   
 }
+function createSlug(stringa){
+    return stringa.toLowerCase()
+}
 
 module.exports = {
-    getInitials
+    getInitials,
+    createSlug
 }
